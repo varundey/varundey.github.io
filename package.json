@@ -10,12 +10,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "deploy": "npm run build && node gh-pages_deploy.js"
+    "preview": "astro preview"
   },
   "dependencies": {
     "astro": "^7.4.0",
-    "gh-pages": "^6.3.0",
     "normalize.css": "^8.0.1",
     "prismjs": "^1.30.0"
   }
