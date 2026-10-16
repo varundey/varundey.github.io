@@ -10,5 +10,3 @@ My past gig was at [NortonLifeLock](https://www.nortonlifelock.com/) (formerly [
 I enjoy watching football (Visca El Barça) and reading in my free time. Check out my [readlist](https://www.goodreads.com/varundey).
 
 You can find me on [Twitter](https://twitter.com/AsDeyQuote), [Github](https://github.com/varundey), and [LinkedIn](https://www.linkedin.com/in/varundey), or reach me via [email](mailto:varundey20@gmail.com). I promise I won't bite. :)
-
-*Site revived in October 2026.*
