@@ -1,3 +1,6 @@
+---
+layout: ../layouts/Layout.astro
+---
 Hi, I am Varun. I build things that help users have a better experience on web.
 
 Currently working as a Software Engineer at [Grofers](https://lambda.grofers.com/) as part of their supply chain engineering.

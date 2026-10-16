@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getPublished } from '../lib/content';
+
+const projects = await getPublished('projects');
+---
+<Layout title="Projects">
+  <h1>Projects</h1>
+  {projects.length === 0 ? <h2>Unable to find any projects.</h2> : (
+    <section style="margin-bottom: 2em">
+      <ul class="listing projects">
+        {projects.map((p) => (
+          <li>
+            <span class="project-link">
+              <a href={p.data.link ?? `/projects/${p.id}/`} target="_blank" rel="noopener noreferrer">{p.data.title}</a>{': '}
+            </span>
+            {p.data.lede && <span>{p.data.lede}</span>}
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+</Layout>

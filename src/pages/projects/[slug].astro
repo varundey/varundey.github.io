@@ -1,0 +1,24 @@
+---
+import { getPublished } from '../../lib/content';
+import { render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  return (await getPublished('projects')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { link, repo, date, lang } = entry.data;
+---
+<Layout title={entry.data.title} description={entry.data.lede}>
+  <h1>{entry.data.title}</h1>
+  {(link || repo) && (
+    <ul class="project-links">
+      {link && <li><a href={link} target="_blank" rel="noopener noreferrer">{link.length > 40 ? 'Link' : link}</a></li>}
+      {date && <li>{date}</li>}
+      {lang && <li>{lang}</li>}
+      {repo && <li><a href={repo} target="_blank" rel="noopener noreferrer">Repo</a></li>}
+    </ul>
+  )}
+  <div class="prose"><Content /></div>
+</Layout>
