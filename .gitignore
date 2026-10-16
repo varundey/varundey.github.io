@@ -63,3 +63,7 @@ yarn-error.log
 .netlify
 .cache
 .idea/
+
+# Astro
+dist/
+.astro/

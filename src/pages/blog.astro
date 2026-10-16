@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getPublished, formatDate } from '../lib/content';
+
+const posts = await getPublished('posts');
+---
+<Layout title="Blog">
+  {posts.length === 0 ? <h2>Unable to find any blog posts.</h2> : (
+    <ul class="listing">
+      {posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+          <span class="date">({formatDate(post.data.date)})</span>
+        </li>
+      ))}
+    </ul>
+  )}
+</Layout>

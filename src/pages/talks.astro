@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getPublished } from '../lib/content';
+
+const talks = await getPublished('talks');
+---
+<Layout title="Talks">
+  {talks.length === 0 ? <h2>Unable to find any talks!</h2> : (
+    <ul class="listing">
+      {talks.map((t) => (
+        <li>
+          <a href={`/talks/${t.id}/`}>{t.data.title}</a>{` @ ${t.data.venue}`}
+        </li>
+      ))}
+    </ul>
+  )}
+</Layout>
