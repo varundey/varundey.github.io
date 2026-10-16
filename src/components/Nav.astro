@@ -1,0 +1,13 @@
+---
+const path = Astro.url.pathname;
+const items = ['blog', 'projects', 'talks'];
+---
+<nav class="nav">
+  <ul>
+    {items.map((name) => (
+      <li>
+        <a href={`/${name}/`} class={path === `/${name}/` ? 'active' : undefined}>{name}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
