@@ -3,7 +3,7 @@ layout: ../layouts/Layout.astro
 documentTitle: "Varun Dey | Backend engineer"
 excerpt: "Backend engineer who likes understanding how systems work from the ground up. Writing about backend engineering and what I'm learning."
 ---
-Backend engineer. I like understanding how systems work from the ground up.
+<p class="tagline">Backend engineer. I like understanding how systems work from the ground up.</p>
 
 Hi, I’m Varun. I build backend systems, and the parts I care about most are the ones nobody sees: what happens between a request arriving and a response leaving, and what breaks when scale or failure shows up. I’m drawn to distributed systems and to taking things apart until I know why they behave the way they do.
 
