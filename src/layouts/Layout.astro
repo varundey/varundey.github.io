@@ -3,6 +3,7 @@ import 'normalize.css';
 import 'prismjs/themes/prism.css';
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 
 interface Props {
   title?: string;
@@ -27,13 +28,22 @@ const image = 'https://varundey.me/social-meta.png';
     <meta name="description" content={description} />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Rubik:700" rel="stylesheet" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#ffffff" />
+    <script is:inline>
+      (function () {
+        var t;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', t === 'dark' ? '#282828' : '#ffffff');
+      })();
+    </script>
 
     <meta property="og:title" content={shareTitle} />
     <meta property="og:description" content={description} />
@@ -50,6 +60,7 @@ const image = 'https://varundey.me/social-meta.png';
   <body>
     <main class="page">
       <header>
+        <ThemeToggle />
         <h1 class="site-title"><a href="/">Varun Dey</a></h1>
         <Nav />
       </header>
