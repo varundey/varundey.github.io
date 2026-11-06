@@ -14,7 +14,7 @@ interface Props {
 const props = Astro.props;
 const pageTitle = props.title ?? props.frontmatter?.title;
 const description =
-  props.description ?? props.frontmatter?.excerpt ?? 'Personal Portfolio of Varun Dey';
+  props.description ?? props.frontmatter?.excerpt ?? 'Backend engineer. I like understanding how systems work from the ground up.';
 const fullTitle = pageTitle ? `Varun Dey | ${pageTitle}` : 'Varun Dey';
 const shareTitle = pageTitle ?? 'Varun Dey';
 const image = 'https://varundey.me/social-meta.png';
