@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img" aria-labelledby="t d">
+<title id="t">Cosine similarity is the angle between two vectors</title>
+<desc id="d">Three arrows start at the same point. The arrows for cat and dog point almost the same way, about 9 degrees apart, giving a cosine similarity of about 0.99. The arrow for Paris is about 83 degrees away from cat, giving about 0.12. On the right, a legend shows that arrows pointing the same way score 1, arrows at a right angle score 0, and opposite arrows score minus 1.</desc>
+<defs>
+<marker id="h2a78d6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker>
+<marker id="h1baf7a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1baf7a"/></marker>
+<marker id="heb6834" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/></marker>
+</defs>
+<style>
+.bg{fill:#fcfcfb} .t1{fill:#0b0b0b;font:600 16px system-ui,sans-serif} .t2{fill:#52514e;font:13px system-ui,sans-serif}
+.lab{fill:#0b0b0b;font:600 14px system-ui,sans-serif} .labs{fill:#52514e;font:13px system-ui,sans-serif}
+.score{fill:#0b0b0b;font:700 20px ui-monospace,Menlo,monospace;text-anchor:end}
+.ar{stroke-width:3;stroke-linecap:round} .arc{fill:none;stroke:#8a8983;stroke-width:1.5;stroke-dasharray:4 3}
+.ang{fill:#52514e;font:12px system-ui,sans-serif} .div{stroke:#e4e3de;stroke-width:1}
+.nm{font:600 15px system-ui,sans-serif}
+</style>
+<rect class="bg" width="760" height="400"/>
+<text class="t1" x="30" y="32">Cosine similarity is the angle between two vectors</text>
+<text class="t2" x="30" y="52">Every token is an arrow from the same starting point. Similar tokens point the same way.</text>
+
+<line class="div" x1="430" y1="80" x2="430" y2="350"/>
+<text class="lab" x="450" y="100">How to read the score</text>
+
+<circle cx="90" cy="320" r="4" fill="#0b0b0b"/>
+<line class="ar" stroke="#2a78d6" x1="90" y1="320" x2="343.7" y2="227.7" marker-end="url(#h2a78d6)"/>
+<line class="ar" stroke="#1baf7a" x1="90" y1="320" x2="282.4" y2="213.3" marker-end="url(#h1baf7a)"/>
+<line class="ar" stroke="#eb6834" x1="90" y1="320" x2="36.0" y2="86.2" marker-end="url(#heb6834)"/>
+<path class="arc" d="M 193.4,282.4 A 110 110 0 0 0 186.2,266.7"/>
+<path class="arc" d="M 155.8,296.1 A 70 70 0 0 0 74.3,251.8"/>
+<text class="nm" fill="#2a78d6" x="351.7" y="241.7">cat</text>
+<text class="nm" fill="#1baf7a" x="290.4" y="207.3">dog</text>
+<text class="nm" fill="#eb6834" x="46.0" y="90.2">Paris</text>
+<text class="ang" x="215.6" y="266.8">9°</text>
+<text class="ang" x="133.9" y="243.1">83°</text>
+
+<text class="lab" x="30" y="368"><tspan fill="#2a78d6">cat</tspan> vs <tspan fill="#1baf7a">dog</tspan>: cos(9°) = 0.99</text>
+<text class="lab" x="30" y="390"><tspan fill="#2a78d6">cat</tspan> vs <tspan fill="#eb6834">Paris</tspan>: cos(83°) = 0.12</text>
+<line class="ar" stroke="#2a78d6" x1="490" y1="160" x2="524.6" y2="140.0" marker-end="url(#h2a78d6)"/><line class="ar" stroke="#1baf7a" x1="490" y1="160" x2="514.2" y2="146.0" marker-end="url(#h1baf7a)"/><circle cx="490" cy="160" r="3" fill="#0b0b0b"/><text class="score" x="592" y="156">1</text><text class="lab" x="608" y="156">same direction</text><text class="labs" x="608" y="174">very similar</text><line class="ar" stroke="#2a78d6" x1="470" y1="235" x2="510.0" y2="235.0" marker-end="url(#h2a78d6)"/><line class="ar" stroke="#eb6834" x1="470" y1="235" x2="470.0" y2="195.0" marker-end="url(#heb6834)"/><circle cx="470" cy="235" r="3" fill="#0b0b0b"/><text class="score" x="592" y="231">0</text><text class="lab" x="608" y="231">right angle</text><text class="labs" x="608" y="249">unrelated</text><line class="ar" stroke="#2a78d6" x1="490" y1="300" x2="528.0" y2="300.0" marker-end="url(#h2a78d6)"/><line class="ar" stroke="#eb6834" x1="490" y1="300" x2="452.0" y2="300.0" marker-end="url(#heb6834)"/><circle cx="490" cy="300" r="3" fill="#0b0b0b"/><text class="score" x="592" y="296">-1</text><text class="lab" x="608" y="296">opposite directions</text><text class="labs" x="608" y="314">as different as it gets</text>
+<text class="t2" x="450" y="350">Only the direction counts, not the length.</text>
+<text class="t2" x="450" y="370">Drawn in 2D; real embeddings have</text>
+<text class="t2" x="450" y="388">thousands of dimensions.</text>
+</svg>
