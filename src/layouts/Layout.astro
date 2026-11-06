@@ -3,6 +3,7 @@ import 'normalize.css';
 import 'prismjs/themes/prism.css';
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 
 interface Props {
   title?: string;
@@ -32,6 +33,17 @@ const image = 'https://varundey.me/social-meta.png';
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#ffffff" />
+    <script is:inline>
+      (function () {
+        var t;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', t === 'dark' ? '#282828' : '#ffffff');
+      })();
+    </script>
 
     <meta property="og:title" content={shareTitle} />
     <meta property="og:description" content={description} />
@@ -48,6 +60,7 @@ const image = 'https://varundey.me/social-meta.png';
   <body>
     <main class="page">
       <header>
+        <ThemeToggle />
         <h1 class="site-title"><a href="/">Varun Dey</a></h1>
         <Nav />
       </header>
