@@ -4,7 +4,11 @@ import { getPublished, formatDate } from '../lib/content';
 
 const posts = await getPublished('posts');
 ---
-<Layout title="Blog">
+<Layout
+  title="Blog"
+  documentTitle="Blog | Varun Dey"
+  description="Working things out and writing down what I learn about backend engineering and the systems around it."
+>
   {posts.length === 0 ? <h2>Unable to find any blog posts.</h2> : (
     <ul class="listing">
       {posts.map((post) => (

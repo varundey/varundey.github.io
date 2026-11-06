@@ -1,5 +1,7 @@
 ---
 layout: ../layouts/Layout.astro
+documentTitle: "Varun Dey | Backend engineer"
+excerpt: "Backend engineer who likes understanding how systems work from the ground up. Writing about backend engineering and what I'm learning."
 ---
 Backend engineer. I like understanding how systems work from the ground up.
 
