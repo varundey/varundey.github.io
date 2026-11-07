@@ -13,8 +13,6 @@ Today I work on [Smartsheet](https://smartsheet.com)’s authentication platform
 one to take apart. Before that I built developer tooling at [Hasura](https://hasura.io) and consumer-scale logistics at [Blinkit](https://blinkit.com), and I started
 my career on the frontend at [Norton](https://norton.com).
 
-[//]: # (so I’m learning it the slow way: reading the specs, breaking things, and writing down what I find.)
-
 That’s what this blog is for: working things out and writing down what I learn.
 
 Outside work I watch football (Visca El Barça) and read. My [readlist](https://www.goodreads.com/varundey) is on Goodreads.
