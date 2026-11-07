@@ -7,16 +7,22 @@ import ThemeToggle from '../components/ThemeToggle.astro';
 
 interface Props {
   title?: string;
+  documentTitle?: string;
   description?: string;
-  frontmatter?: { title?: string; excerpt?: string };
+  frontmatter?: { title?: string; documentTitle?: string; excerpt?: string };
 }
+
+const DEFAULT_DESCRIPTION =
+  "Backend engineer who likes understanding how systems work from the ground up. Writing about backend engineering and what I'm learning.";
 
 const props = Astro.props;
 const pageTitle = props.title ?? props.frontmatter?.title;
 const description =
-  props.description ?? props.frontmatter?.excerpt ?? 'Personal Portfolio of Varun Dey';
-const fullTitle = pageTitle ? `Varun Dey | ${pageTitle}` : 'Varun Dey';
-const shareTitle = pageTitle ?? 'Varun Dey';
+  props.description ?? props.frontmatter?.excerpt ?? DEFAULT_DESCRIPTION;
+const documentTitle = props.documentTitle ?? props.frontmatter?.documentTitle;
+const fullTitle = documentTitle ?? (pageTitle ? `Varun Dey | ${pageTitle}` : 'Varun Dey');
+const shareTitle = documentTitle ?? pageTitle ?? 'Varun Dey';
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const image = 'https://varundey.me/social-meta.png';
 ---
 <!doctype html>
@@ -26,6 +32,7 @@ const image = 'https://varundey.me/social-meta.png';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Rubik:700" rel="stylesheet" />
 
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -48,7 +55,7 @@ const image = 'https://varundey.me/social-meta.png';
     <meta property="og:title" content={shareTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://varundey.me" />
+    <meta property="og:url" content={canonical} />
     <meta property="og:image" content={image} />
     <meta property="og:image:secure_url" content={image} />
     <meta name="twitter:card" content="summary" />
