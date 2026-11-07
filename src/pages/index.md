@@ -5,7 +5,9 @@ excerpt: "Backend engineer who likes understanding how systems work from the gro
 ---
 <p class="tagline">Backend engineer. I like understanding how systems work from the ground up.</p>
 
-Hi, I’m Varun. I build backend systems, and the parts I care about most are the ones nobody sees: what happens between a request arriving and a response leaving, and what breaks when scale or failure shows up. I’m drawn to distributed systems and to taking things apart until I know why they behave the way they do.
+Hi, I’m Varun. I build backend systems, and the parts I care about most are the ones nobody sees: what happens between a
+request arriving and a response leaving, and what breaks when scale or failure shows up. I’m drawn to distributed systems
+and to taking things apart until I know why they behave the way they do.
 
 I started my career on the frontend, and since then I’ve worked on consumer-scale logistics, developer tooling, and security products. Lately I’m getting deep into authentication, which is new to me, and learning it the slow way.
 
