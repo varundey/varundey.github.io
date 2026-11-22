@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 385" width="760" height="385" role="img" aria-labelledby="t d">
+<title id="t">Attention: the row for "it" looks back at earlier rows</title>
+<desc id="d">Six words: The, cat, was, tired, because, it. Arcs run from the word it back to each earlier word. The arc to cat is thickest, with 62 percent of the attention. tired gets 18 percent, because 6 percent, was 4 percent, The 3 percent, and it itself 7 percent.</desc>
+<style>
+.bg{fill:#fcfcfb} .t1{fill:#0b0b0b;font:600 16px system-ui,sans-serif} .t2{fill:#52514e;font:13px system-ui,sans-serif}
+.lab{fill:#0b0b0b;font:600 14px system-ui,sans-serif} .tok{fill:#fff;stroke:#b8b7b0;stroke-width:1.5} .mono{font:600 15px ui-monospace,Menlo,monospace}
+.pct{font:600 15px system-ui,sans-serif;text-anchor:middle} .row{fill:#e9e8e3;stroke:#b8b7b0} .rowb{fill:#cfe0f7;stroke:#2a78d6}
+</style>
+<rect class="bg" width="760" height="385"/>
+<text class="t1" x="30" y="32">Attention: the row for “it” looks back and decides what matters</text>
+<text class="t2" x="30" y="52">Thicker arc = more attention. The percentages always add up to 100%. (Illustrative numbers.)</text>
+<path d="M 680.0 250 Q 380.0 15 80.0 250" fill="none" stroke="#8a8983" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+<path d="M 680.0 250 Q 440.0 53 200.0 250" fill="none" stroke="#2a78d6" stroke-width="11.2" stroke-linecap="round" opacity="0.9"/>
+<path d="M 680.0 250 Q 500.0 91 320.0 250" fill="none" stroke="#8a8983" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+<path d="M 680.0 250 Q 560.0 129 440.0 250" fill="none" stroke="#8a8983" stroke-width="3.2" stroke-linecap="round" opacity="0.55"/>
+<path d="M 680.0 250 Q 620.0 167 560.0 250" fill="none" stroke="#8a8983" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+<rect class="tok" x="30" y="250" width="100" height="40" rx="8" />
+<text class="mono" x="80.0" y="276" text-anchor="middle" fill="#0b0b0b">The</text>
+<text class="pct" x="80.0" y="316" fill="#52514e">3%</text>
+<rect class="tok" x="150" y="250" width="100" height="40" rx="8" stroke="#2a78d6" stroke-width="2.5"/>
+<text class="mono" x="200.0" y="276" text-anchor="middle" fill="#2a78d6">cat</text>
+<text class="pct" x="200.0" y="316" fill="#2a78d6">62%</text>
+<rect class="tok" x="270" y="250" width="100" height="40" rx="8" />
+<text class="mono" x="320.0" y="276" text-anchor="middle" fill="#0b0b0b">was</text>
+<text class="pct" x="320.0" y="316" fill="#52514e">4%</text>
+<rect class="tok" x="390" y="250" width="100" height="40" rx="8" />
+<text class="mono" x="440.0" y="276" text-anchor="middle" fill="#0b0b0b">tired</text>
+<text class="pct" x="440.0" y="316" fill="#52514e">18%</text>
+<rect class="tok" x="510" y="250" width="100" height="40" rx="8" />
+<text class="mono" x="560.0" y="276" text-anchor="middle" fill="#0b0b0b">because</text>
+<text class="pct" x="560.0" y="316" fill="#52514e">6%</text>
+<rect class="tok" x="630" y="250" width="100" height="40" rx="8" stroke="#eb6834" stroke-width="2.5"/>
+<text class="mono" x="680.0" y="276" text-anchor="middle" fill="#eb6834">it</text>
+<text class="pct" x="680.0" y="316" fill="#eb6834">7%</text>
+<text class="t2" x="680.0" y="334" text-anchor="middle">(itself)</text>
+<text class="t2" x="30" y="368">After this step, the row for “it” carries a blend of what the other rows know, mostly what “cat” knows.</text>
+</svg>

@@ -56,7 +56,7 @@ def generate(prompt_tokens, max_new_tokens):
 
 Two names in there are not defined in this part:
 
-- `sample` picks a token from the probabilities. The simplest version takes the most likely one; real systems add controlled randomness. See part 2.
+- `sample` picks a token from the probabilities. The simplest version takes the most likely one; real systems add controlled randomness. See [part 2](/blog/llm-layers-and-attention-for-backend-engineers/#step-4-pick-a-token).
 - `END_OF_TEXT` is a special token that the model itself predicts when a reply is finished. We'll see how that works in part 3.
 
 This is called **autoregressive generation**: each output token is fed back in as input for the next step. Every property of an LLM service that you'll later care about (latency, streaming, cost, batching) follows from this loop.
@@ -207,15 +207,15 @@ So the grid for "The cat sat" in a real model has 3 rows and 4,096 columns. Peop
 
 A shape is a *count*, not a last index. Indexing starts at 0, so the columns are numbered 0 to 4095, but there are still 4,096 of them, exactly like `len([0] * 4096)` is 4096 even though the last valid index is 4095. Likewise, the 3 rows are numbered 0 to 2, and the shape says 3.
 
-That grid is what goes into the model's layers. What the layers do with it is the subject of part 2.
+That grid is what goes into the model's layers. What the layers do with it is the subject of [part 2](/blog/llm-layers-and-attention-for-backend-engineers/).
 
 ## What's next in the series
 
 1. **How an LLM sees text: tokens and vectors** (this post)
-2. **How an LLM understands context: layers and attention.** How each token's vector gets enriched with context, and how the model picks the next token.
+2. [**How an LLM understands context: layers and attention.**](/blog/llm-layers-and-attention-for-backend-engineers/) How each token's vector gets enriched with context, and how the model picks the next token.
 3. **Anatomy of a chat request.** Chat templates, statelessness, context windows and prompt caching.
 4. **LLM inference: serving is a scheduling problem.** KV cache, continuous batching, and why GPU memory is the scarce resource.
 5. **Retrieval, tools and agents.** Why an agent is a distributed workflow with a flaky, non-deterministic step.
 6. **Training at scale.** Distributed training as a fault-tolerance problem.
 
-In part 2 we'll open up the model and see what happens to this grid of vectors.
+In [part 2](/blog/llm-layers-and-attention-for-backend-engineers/) we'll open up the model and see what happens to this grid of vectors.
